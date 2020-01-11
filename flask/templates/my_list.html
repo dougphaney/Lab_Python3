@@ -1,0 +1,94 @@
+<!doctype html>
+<meta charset="utf-8"/>
+
+<html lang="pt-br">
+
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+   <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+   <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>-->
+
+   <head>
+
+      <title>Lista de Cadastro</title>
+
+      <style>
+			table tr:nth-child(even)
+               {background-color:#eee;}
+
+			table tr:nth-child(odd)
+               {background-color:#fff;}
+
+			table th,tr
+               {padding:5px;
+               text-align:center;}
+      </style>
+
+   </head>
+
+   <body>
+
+      <img src="/static/image/logo_faisp.png" alt="texto alternativo" title="Imagem" style="width:620px;height:230px;">
+	  <h3><i>SICAD - Sistema de Cadastro de Aluno</i></h3>
+	  <br>		
+
+      <table border="3" width="80%">
+         <thead>
+            <tr>
+               <th scope="col">Nome</th>
+               <th scope="col">Endereço</th>
+               <th scope="col">Data de Nascimento</th>
+               <th scope="col">Gênero</th>
+               <th scope="col">Objetivo de Graduação</th>
+               <th scope="col">Email</th>
+               <th scope="col">Excluir</th>
+               <th scope="col">Editar</th>
+            </tr>
+         </thead>
+
+         {% for n in my_list %}
+
+            <tr>
+
+               <td>{{n.NOME}}</td>
+               <td>{{n.ENDERECO}}</td>
+               <td>{{n.DT_NASC}}</td>
+               <td>{{n.GENERO}}</td>
+               <td>{{n.OBJ_GRAD}}</td>
+               <td>{{n.EMAIL}}</td>
+
+               <td>
+                  <a href="http://localhost:5000/excluir/{{n.ID}}" class="btn btn-danger">
+                  <span class="glyphicon glyphicon-remove"></span>
+                  </a>
+               </td>
+
+               <td>
+                  <a href="http://localhost:5000/editaruser/{{n.ID}}" class="btn btn-success">
+                  <span class="glyphicon glyphicon-edit"></span>
+                  </a>
+               </td>
+
+            </tr>
+
+         {% endfor %}
+
+      </table>
+
+      <br>
+
+      <p><a href="http://localhost:5000/cadastro">Cadastrar Novo Usuário</a></p>
+
+      <br><hr/>
+
+      <address>
+         <h6 style="text-align:right">Created by:<br>
+         Faculdade Interativa de São Paulo<br>
+         Curso: ADS - Análise e Desenvolvimento de Sistemas<br>
+         Disciplina: Lógica e Algoritimos<br>
+         Professor: Luigi Tavolaro<br>
+         Aluno: Douglas Rosa</h6>
+      </address>
+
+   </body>
+
+</html>

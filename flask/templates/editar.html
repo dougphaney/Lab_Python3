@@ -1,0 +1,107 @@
+<!doctype html>
+<meta charset="utf-8"/>
+
+<html lang="pt-br">
+
+   <head>
+
+      <title>Editar</title>
+
+      <style>
+         table tr:nth-child(even)
+            {background-color:#eee;}
+
+         table tr:nth-child(odd)
+            {background-color:#fff;}
+
+         table input,th
+            {padding:5px;
+            text-align:center;}
+      </style>
+
+   </head>
+
+   <body>
+
+      <img src="/static/image/logo_faisp.png" alt="texto alternativo" title="Imagem" style="width:620px;height:230px;">
+	  <h3><i>SICAD - Sistema de Cadastro de Aluno</i></h3>
+	  <br>
+
+      <form action="http://localhost:5000/editar" method="POST">
+
+         <table border="2" width="40%">
+            <tr>
+               <input type="hidden" name = "idUsr" value='{{MyUser[0].ID}}'/>
+            </tr>
+
+            <tr>
+               <th>Nome</th>
+               <th><label><input type="text" name="nome" value='{{MyUser[0].NOME}}' /></label></th>
+            </tr>
+
+            <tr>
+               <th>Endereço</th>
+               <th><label><input type="text" name="endereco" value='{{MyUser[0].ENDERECO}}' /></label></th>
+            </tr>
+
+            <tr>
+               <th>Nascimento</th>
+               <th><label><input type="text" placeholder="dd/mm/aaaa" name="nascimento" value='{{MyUser[0].NASCIMENTO}}' /></label></th>
+            </tr>
+
+            <tr>
+               <th>Gênero</th>
+                  <th><label>
+                     <select name="genero">
+                     <option label="Selecione"></option>
+                     <option label="Masculino">Masculino</option>
+                     <option label="Feminino">Feminino</option>
+                     </select>
+                  </label></th>
+            </tr>
+
+            <tr>
+               <th>Objetivo da Graduação</th>
+               <th><label><input type="text" name="obj_grad" value='{{MyUser[0].OBJ_GRAD}}'/></label></th>
+            </tr>
+
+            <tr>
+               <th>Email</th>
+               <th><label><input type="text" placeholder="email@email.com" name="email" value='{{MyUser[0].EMAIL}}' /></label></th>
+            </tr>
+
+            <tr>
+               <th>Usuário</th>
+               <th><label><input type="text" name="usuario" value='{{MyUser[0].USUARIO}}' /></label></th>
+            </tr>
+
+            <tr>
+               <th>Senha</th>
+               <th><label><input type="password" name="senha" value='{{MyUser[0].SENHA}}' /></label></th>
+            </tr>
+
+         </table>
+
+		 <br>
+
+         <p>
+            <a href="http://localhost:5000"><input type="submit" value="Atualizar"/></a>
+
+         </p>
+
+         <br><hr/>
+
+		 <address>
+         <h6 style="text-align:right">Created by:<br>
+         Faculdade Interativa de São Paulo<br>
+         Curso: ADS - Análise e Desenvolvimento de Sistemas<br>
+         Disciplina: Lógica e Algoritimos<br>
+         Professor: Luigi Tavolaro<br>
+         Aluno: Douglas Rosa</h6>
+		 </address>
+
+      </form>
+
+   </body>
+
+</html>

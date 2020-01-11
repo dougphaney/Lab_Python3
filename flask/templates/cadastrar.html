@@ -1,0 +1,109 @@
+<!doctype html>
+<meta charset="utf-8"/>
+
+<html lang="pt-br">
+
+   <head>
+
+      <title>Loja</title>
+      <link rel="stylesheet" type="text/css" href="/static/contents/style.css">
+
+      <style>
+
+      </style>
+
+   </head>
+
+   <body>
+
+      <div class="container">
+         <div>
+            <div width="50% float:right">
+               <img src="/static/image/logo_faisp.png" alt="texto alternativo" title="Imagem" style="width:620px;height:230px;">
+            </div>
+            <div width="20%  float:center">
+               <img src="/static/image/hacker.png" alt="texto alternativo" title="Imagem" style="width:80px; height:50px;">
+            </div>
+            <div width="30% float:left">
+               <h6 style="text-align:left">Created by:<br>
+               Faculdade Interativa de São Paulo<br>
+               Curso: ADS - Análise e Desenvolvimento de Sistemas<br>
+               Disciplina: Lógica e Algoritimos<br>
+               Professor: Luigi Tavolaro<br>
+               Aluno: Douglas Rosa</h6>
+            </div>
+         </div>
+      </div>
+
+
+	  <h3><i>SICAD - Sistema de Cadastro de Aluno</i></h3>
+	  <br>
+
+      <form action="http://localhost:5000/resultado" method="POST">
+
+         <table border="2" width="40%">
+            <tr>
+               <th>Nome</th>
+               <th><label><input type="text" name="nome" /></label></th>
+            </tr>
+
+            <tr>
+               <th>Endereço</th>
+               <th><label><input type="text" name="endereco" /></label></th>
+            </tr>
+
+            <tr>
+               <th>Nascimento</th>
+               <th><label><input type="text" placeholder="dd/mm/aaaa" name="nascimento" /></label></th>
+            </tr>
+
+            <tr>
+               <th>Gênero</th>
+                  <th><label>
+                     <select name="genero">
+                     <option label="Selecione"></option>
+                     <option label="Masculino">Masculino</option>
+                     <option label="Feminino">Feminino</option>
+                     </select>
+                  </label></th>
+            </tr>
+
+            <tr>
+               <th>Objetivo da Graduação</th>
+               <th><label><input type="text" name="obj_grad" /></label></th>
+            </tr>
+
+            <tr>
+               <th>Email</th>
+               <th><label><input type="text" placeholder="email@email.com" name="email" /></label></th>
+            </tr>
+
+            <tr>
+               <th>Usuário</th>
+               <th><label><input type="text" name="usuario" /></label></th>
+            </tr>
+
+            <tr>
+               <th>Senha</th>
+               <th><label><input type="password" name="senha" /></label></th>
+            </tr>
+
+         </table>
+
+		 <br>
+
+         <p>
+            <a href="http://localhost:5000"><input type="submit" value="Cadastrar"/></a>
+            <a href="http://localhost:5000">Retornar</a>
+         </p>
+
+         <br><hr/>
+		
+		 <address>
+                     </address>
+
+      </form>
+
+   </body>
+
+</html>
